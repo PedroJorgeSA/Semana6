@@ -22,7 +22,8 @@ var x = 5;
 console.log(y);
 let y = 10;
 ```
-a) A saída será undefined seguido de erro 
+Correta: a) A saída será undefined seguido de erro 
+Justificativa: pela leitura do javascript ser de cima para baixo, o código não le o let y = 10 e nem o var = 5 previamente deles serem expostos pelos console.logs. a forma correta seria adicionando o console log após a definição de cada variavel, para o códio ser lido e exposto.
 
 b) A saída será 5 seguido de 10
 
@@ -45,7 +46,8 @@ console.log(soma(2, 0));
 
 a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
 
-b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
+Correta: b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
+Justificativa: A verificação a || b === 0 sempre indica o numero como invalida pois a soma define o b como 0, sendo assim, executando a logica, a OU b sendo 0 o numero sera invalido. alterando agora para uma verificação separada, analisando a de forma isolada e depois determinando que b TAMBÉM deve ser zero, exclui o erro de apenas um numero ser 0 e invalidar o outro.
 
 c) Substituir if (a || b === 0) por if (a && b === 0)
 
@@ -78,7 +80,8 @@ console.log(calcularPreco("eletrônico"));
 
 a) O código imprime 1000.
 
-b) O código imprime 200.
+Correta: b) O código imprime 200.
+Justificativa: o código executando a estrutura condiciona switch 'Switch' e alterando o let preço, verifica os casos eletronico, vestuario e alimento. o console log chama a função calcular preço que aciona o switch case, a condicional é executada verificando o case eletronico, porém não é parado, é apenas finalizado no caso vestuário que possui um break e no final imprimindo 200. Para corrigir isso deve ser adicionado um break após eletronico.
 
 c) O código imprime 50.
 
@@ -99,7 +102,8 @@ b) 6
 
 c) 18
 
-d) 24
+Correta: d) 24
+Justificativa: o Let numeros cria a primeira array, definindo a sequencia de numeros indicada. o numeros.map cria um novo array, multiplicando todos os numeros do array anterior por 2. o .filter filtra todos os numeros da array criada, apenas mostrando todos os numeros maiores que 5, trazendo o resultado 6, 8, 10. o .reduce soma todos os valores do array criado pelo .filter, iniciando por 0 sendo assim: 0 + 6; 0 + 8; 14 + 10; finalizando o console log final com 24.
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -113,7 +117,8 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 
 b) ["banana", "abacaxi", "manga"]
 
-c) ["banana", "abacaxi", "manga", "laranja"]
+Correta: c) ["banana", "abacaxi", "manga", "laranja"]
+Justificativa: O .splice que foi usado tem a função de remover e substituir elementos dentro de um array. no exemplo mostrado, o array inicial é definido, após isso o lista.splice o remove o elemento 1 e 2, respectivamente "maça" e "uva", pois o elemento 0 seria "banana". e substitui os dois elementos retirados por "abacaxi" e "manga". Por fim, o console nome exibe a nova lista. com os elementos substituidos.
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
 ______
