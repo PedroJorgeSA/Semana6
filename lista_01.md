@@ -130,7 +130,8 @@ II. Em JavaScript, a herança é implementada através da palavra-chave `extends
 
 a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
 
-b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
+Correta: b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
+Justifica: A primeira afirmação está correta sobre o conceito de herança e sua função, porém a segunda afirmação mesmo que verdadeira, não justifica o funcionamento de herança no Javascript, mas sim mostra como usa-lo.
 
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
 
@@ -170,7 +171,8 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
-a) I e II são verdadeiras.
+Correta: a) I e II são verdadeiras.
+Justificativa: a alternativa III está incorreta porque o javascript suporta herança de classes.
 
 b) I, II e III são verdadeiras.
 
@@ -187,7 +189,8 @@ ______
 
 a) A asserção é falsa e a razão é verdadeira.
 
-b) A asserção é verdadeira e a razão é falsa.
+Correta: b) A asserção é verdadeira e a razão é falsa.
+Justificativa: O javascript não suporta a sobrecarga de metodos, definindo multiplos metodos com parametros diferentes, no JavaScript, o polimorfismo é implementado principalmente através de herança e sobrescrita de métodos, ou seja, uma classe filha pode sobrescrever um método da classe pai para fornecer uma implementação específica.
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
@@ -207,6 +210,22 @@ function somaArray(numeros) {
     return soma;
 }
 console.log(somaArray([1, 2, 3, 4]));
+```
+
+```javascript
+let numeros // definindo a var numeros
+
+function somaArray(numeros) {
+    let soma = 0; 
+    numeros = [3, 6, 9, 12]; // Adicionando os numeros que serão multiplicados e somados
+
+    for (let i = 0; i < numeros.length; i++) { // numeros.size substituido por numeros.lenght 
+        soma += 2*numeros[i]; // o soma = 2*numeros[i] foi substituido por soma += 2*numeros[i]
+    }
+    return soma;
+}
+
+console.log(somaArray(numeros)); // referenciando diretamente a var numeros ao inves de colocar os numeros
 ```
 ______
 10) Crie um exemplo prático no qual você tenha duas classes:
