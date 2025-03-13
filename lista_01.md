@@ -23,7 +23,7 @@ console.log(y);
 let y = 10;
 ```
 Correta: a) A saída será undefined seguido de erro 
-Justificativa: pela leitura do javascript ser de cima para baixo, o código não le o let y = 10 e nem o var = 5 previamente deles serem expostos pelos console.logs. a forma correta seria adicionando o console log após a definição de cada variavel, para o códio ser lido e exposto.
+Justificativa: pela leitura do javascript ser de cima para baixo, o código não le o let y = 10 e nem o var = 5 previamente deles serem expostos pelos console.logs. a forma correta seria adicionando o console log após a definição de cada variavel, para o código ser lido e exposto.
 
 b) A saída será 5 seguido de 10
 
@@ -172,7 +172,7 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
 Correta: a) I e II são verdadeiras.
-Justificativa: a alternativa III está incorreta porque o javascript suporta herança de classes.
+Justificativa: Alternativa I: A classe Funcionario herda de Pessoa e pode acessar os atributos nome e idade diretamente. Alternativa II: O método apresentar() da classe Funcionario sobrepõe o método da classe Pessoa, mas chama o método da classe pai usando super, está correta. alternativa III está incorreta porque o javascript suporta herança de classes.
 
 b) I, II e III são verdadeiras.
 
@@ -190,7 +190,7 @@ ______
 a) A asserção é falsa e a razão é verdadeira.
 
 Correta: b) A asserção é verdadeira e a razão é falsa.
-Justificativa: O javascript não suporta a sobrecarga de metodos, definindo multiplos metodos com parametros diferentes, no JavaScript, o polimorfismo é implementado principalmente através de herança e sobrescrita de métodos, ou seja, uma classe filha pode sobrescrever um método da classe pai para fornecer uma implementação específica.
+Justificativa: A asserção está correta, pois o polimorfismo permite que diferentes classes respondam ao mesmo método de formas distintas. A razão é falsa porque JavaScript não suporta sobrecarga de métodos (definir múltiplos métodos com o mesmo nome e parâmetros diferentes). Em vez disso, o polimorfismo é implementado através de herança e sobrescrita de métodos.
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
@@ -200,6 +200,8 @@ ______
 
 # Questões dissertativas
 9) O seguinte código deve retornar a soma do dobro dos números de um array, mas contém erros. Identifique os problema e corrija o código para que funcione corretamente. Adicione comentários ao código explicado sua solução para cada problema.
+
+A variável soma deve ser inicializada com 0 para evitar erros de referência. O método correto para obter o tamanho de um array é .length, não .size. O operador += acumula a soma do dobro dos números.
 
 ```javascript
 function somaArray(numeros) {
