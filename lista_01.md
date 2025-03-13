@@ -234,3 +234,33 @@ ______
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
+
+para a implementação das classes e o desconto, usei herança ao fazer a classe Livro estender Produto, aproveitando seus atributos e métodos. No construtor, chamei super(nome, preco) para herdar corretamente os valores. Além disso, criei calculardesconto(), usando super.calculardesconto() para aplicar 10% de desconto e subtraindo mais 10% do preço original, garantindo um total de 20% sem sobrescrever completamente o método da classe pai.
+
+```javascript
+class Produto {
+  constructor(nome, preco) { // Criando a classe produto com os atributos nome e preço
+    this.nome = nome; // Atribuindo o valor do parametro nome ao atributo nome
+    this.preco = preco; // Atribuindo o valor do parametro preco ao atributo preco
+  }
+  calculardesconto() { // metodo criado para aplicar um desconto de 10% no preço do produto
+    return this.preco * 0.9; // Criando a lógica para aplicar o desconto de 10%
+  }
+}
+
+class Livro extends Produto{ // Criando a classe Livro que herda os atributos da classe Produto
+    constructor(nome, preco){ // Criando o construtor da classe
+        super(nome, preco); // chamando os parametros da classe pai
+    }
+
+    calculardesconto() { //alterando o metodo calculardesconto da classe pai para 20$
+        return super.calculardesconto() - this.preco * 0.1; // Logica que calcula o desconto, preço atual com 10% de desconto - 10% do valor original
+    }
+}
+
+const produto = new Produto('Livros', 30); // Cria o produto dentro da classe Produto
+console.log("Seu produto com 10% de desconto:", produto.calculardesconto()); //Chama a função de 10% de desconto
+
+const livro = new Livro('Aprendendo Javascript', 30);// Cria o livro dentro da classe Livro
+console.log("Seu livro com 20% de desconto:", livro.calculardesconto()); //Chama a função de 20% de desconto
+```
